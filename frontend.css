@@ -1,0 +1,137 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    width: 100%;
+    padding: 40px 5%;
+    border-bottom: 2px solid #0ea5e9;
+    margin-bottom: 50px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #0ea5e9;
+    font-size: 2.2rem;
+}
+
+.voltar-btn {
+    text-decoration: none;
+    background: #0ea5e9;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.voltar-btn:hover {
+    background: #fff;
+    transform: translateX(-5px);
+}
+
+/* Container e Grid (3 colunas) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+}
+
+/* Estilo dos Cards */
+.projeto-card {
+    background: transparent;
+    border: 2px solid #0ea5e9;
+    padding: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    position: relative;
+}
+
+.projeto-card:hover {
+    background: rgba(14, 165, 233, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+}
+
+.medalha {
+    font-size: 0.75rem;
+    color: #000;
+    background: #7dd3fc;
+    padding: 2px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.projeto-card h3 {
+    color: #0ea5e9;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.projeto-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0ea5e9;
+    border: 1px solid #0ea5e9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .grid-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
